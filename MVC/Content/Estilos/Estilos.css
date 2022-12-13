@@ -1,0 +1,46 @@
+﻿.alinearCentro{
+    text-align:center;
+}
+
+.Titulo{
+    background-color:blue;
+    font-size:25px;
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+}
+
+.BotonNuevo {
+    background: #8ED813;
+    color: white;
+    border:none
+}
+
+.botonRegresar {
+    background: #FF2929;
+    color: white ;
+    border:none
+}
+
+.columnA {
+    background-color: #949798;
+    color: #FFF;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-align: center !important;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.columnB {
+    background-color: #7495A0;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    text-align: center !important;
+    color: #FFF;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ColorFondo{
+    background-color:antiquewhite
+}

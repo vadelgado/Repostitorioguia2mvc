@@ -1,0 +1,69 @@
+﻿@model List<MVC.Models.Persona>
+@{
+    //Layout = "~/Views/Shared/_LayoutPNatural.cshtml";
+    ViewBag.Title = "Usuarios Registrados";
+}
+
+<link href="~/Content/Estilos/Estilos.css" rel="stylesheet" />
+<div class="row container-fluid">
+    <br />
+    <div class="row Titulo alinearCentro">
+        <label class="alinearCentro">@ViewBag.Title</label>
+    </div>
+    @{
+        if (TempData["error"] != null)
+        {
+            <br />
+            <div class="alert alert-danger fuenteEstandar" style="width:98%; margin-left:1%">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Información! </strong> @TempData["error"]
+            </div>
+        }
+        else
+             if (TempData["exito"] != null)
+        {
+            <br />
+            <div class="alert alert-info fuenteEstandar" style="width:98%; margin-left:1%">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Información! </strong> @TempData["exito"]
+            </div>
+        }
+
+
+    }
+    <br />
+    <div class="row">
+        <a href="/Usuario/Create" class="btn BotonNuevo"><i class="glyphicon glyphicon-plus"></i>&nbsp; Nuevo Registro</a>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <table style="width:100%" class="table-bordered table-responsive">
+                <tr class="alinearCentro">
+                    @*<td>Id</td>*@
+                    <td class="columnA">Primer Nombre</td>
+                    <td class="columnB">Segundo Nombre</td>
+                    <td class="columnA">Primer Apellido</td>
+                    <td class="columnB">Segundo Apellido</td>
+                    <td class="columnA">Ciudad</td>
+                    <td class="columnB">Edad</td>
+                    <td class="columnA">Opciones</td>
+                </tr>
+                @foreach (var elemento in Model)
+                {
+                    <tr class="alinearCentro">
+                        @*<td>@elemento.Id_usuario</td>*@
+                        <td>@elemento.PrimerNombre</td>
+                        <td>@elemento.SegundoNombre</td>
+                        <td>@elemento.PrimerApellido</td>
+                        <td>@elemento.SegundoApellido</td>
+                        <td>@elemento.Ciudad</td>
+                        <td>@elemento.Edad</td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
+
